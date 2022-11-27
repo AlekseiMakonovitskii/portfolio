@@ -1,0 +1,17 @@
+.category {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+	width: 100px;
+	top: 0;
+	right: 0;
+	position: absolute;
+	color: white;
+	font-weight: 900;
+	font-size: 1.1rem;
+}
+
+.css-html {
+	background: rgb(254, 90, 90);
+}

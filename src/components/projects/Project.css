@@ -1,0 +1,40 @@
+.project {
+	height: 400px;
+	width: 450px;
+	background: #f5f5f5;
+	margin: 20px;
+	border-radius: 20px;
+	padding: 20px;
+	padding-bottom: 20px;
+}
+
+.project-image {
+	height: 80%;
+	position: relative;
+}
+
+.project-image a {
+	width: 100%;
+	height: 100%;
+}
+
+.project-image a img {
+	height: 100%;
+	width: 100%;
+	padding-bottom: 10px;
+}
+
+.project-info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+	color: #3C4048;
+	padding: 20px;
+	background: white;
+	border-top: 3px solid #f5f5f5;;
+	height: 20%;
+	border-radius: 10px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}

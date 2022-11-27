@@ -1,0 +1,17 @@
+.about {
+	display: flex;
+	width: 80%;
+	background: #ffffff;
+	flex-direction: row;
+	flex: 1;
+	margin: 20px 0px;
+}
+
+
+@media screen and (max-width: 900px) {
+	.about {
+		flex-direction: column;
+		width: 100%;
+	}
+}
+
