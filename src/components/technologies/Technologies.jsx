@@ -2,11 +2,22 @@ import React from 'react'
 import './Technologies.css';
 import Tech from './Tech';
 
-const Technologies = () => {
+const Technologies = (props) => {
+
+	const textContent = {
+		'RUS': {
+			h1: 'Технологии, которые я использую',
+		},
+
+		'ENG': {
+			h1: 'Technologies I use',
+		},
+	}
+
 	return (
 		<div className='technologies'>
 			<div className="technologies-title">
-				<h1>Технологии, которые я использую</h1>
+				<h1>{textContent[props.language].h1}</h1>
 			</div>
 
 			<div className="technologies-body">

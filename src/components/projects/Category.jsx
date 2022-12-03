@@ -3,10 +3,13 @@ import './Category.css'
 
 const Category = (props) => {
 	let categoryClass = '';
-	console.log(props.category)
 
 	if (props.category === 'HTML/CSS') {
 		categoryClass = 'category css-html';
+	}
+
+	if (props.category === 'JavaScript') {
+		categoryClass = 'category JavaScript';
 	}
 
 	return (

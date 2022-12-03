@@ -3,11 +3,11 @@ import './About.css'
 import Info from '../info/Info'
 import Technologies from '../technologies/Technologies'
 
-const About = () => {
+const About = (props) => {
 	return (
 		<div className='about'>
-				<Info />
-				<Technologies />
+				<Info language={props.language}/>
+				<Technologies language={props.language}/>
 		</div>
 	
 	)
