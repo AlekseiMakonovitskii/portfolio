@@ -6,7 +6,7 @@ const Project = props => {
   return (
     <div className="project">
       <div className="project-image">
-        <a href={props.project.url} target="_blank">
+        <a href={props.project.url} target="_blank" rel="noreferrer">
 					<Category category={props.project.category}/>
           <img src={props.project.img} alt="" />
         </a>
