@@ -6,13 +6,13 @@ const Info = (props) => {
 	const textContent = {
 		'RUS': {
 			p1: 'Привет, меня зовут Алексей, я начинающий Frontend разработчик.',
-			p2: 'В данный момент у меня нет опыта работы в разработке, но я активно изучаю данное направление уже почти год.',
+			p2: 'Я активно занимаюсь Frontend разработкой уже почти год, изучаю новые технологии и работаю над проектами.',
 			p3: 'Буду рад работать с вами в одной команде.'
 		},
 
 		'ENG': {
 			p1: `Hello, my name is Aleksei, I'm a beginner Frontend developer.`,
-			p2: `At the moment I have no work experience in development, but I have been actively studying this area for almost a year.`,
+			p2: `I have been actively involved in Frontend development for almost a year now, learning new technologies and working on projects.`,
 			p3: 'I will be glad to work with you in the same team.',
 		},
 	}
