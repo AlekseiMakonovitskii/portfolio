@@ -1,7 +1,11 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 
 function App() {
-  return <div>App</div>;
+  return <>
+    App
+    <Outlet />
+  </>;
 }
 
 export default App;
