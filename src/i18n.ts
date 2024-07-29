@@ -6,24 +6,21 @@ import enLang from './locales/en.json';
 
 const resources = {
   en: {
-    translation: enLang
+    translation: enLang,
   },
   ru: {
-    translation: ruLang
-  }
+    translation: ruLang,
+  },
 };
 
 const DETECTION_OPTIONS = {
-  order: ['navigator']
+  order: ['navigator'],
 };
 
-i18n
-  .use(initReactI18next)
-  .use(LanguageDetector)
-  .init({
-    detection: DETECTION_OPTIONS,
-    resources,
-    fallbackLng: 'en'
-  });
+i18n.use(initReactI18next).use(LanguageDetector).init({
+  detection: DETECTION_OPTIONS,
+  resources,
+  fallbackLng: 'en',
+});
 
 export default i18n;
