@@ -33,16 +33,15 @@ function Header() {
   const setActiveButton = (e: React.MouseEvent<HTMLElement>) => {
     const href = e.currentTarget.getAttribute('href');
     const buttons = navButtons.map((button) => {
-      const newButton = button;
-      newButton.colorScheme = 'gray';
-      newButton.variant = 'ghost';
+      button.colorScheme = 'gray';
+      button.variant = 'ghost';
 
-      if (newButton.to === href) {
-        newButton.colorScheme = 'blue';
-        newButton.variant = 'solid';
+      if (button.to === href) {
+        button.colorScheme = 'blue';
+        button.variant = 'solid';
       }
 
-      return newButton;
+      return button;
     })
 
     setNavButtons(buttons);
