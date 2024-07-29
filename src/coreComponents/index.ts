@@ -1,5 +1,4 @@
 import {
-  Container,
   Box,
   Flex,
   Spacer,
@@ -12,7 +11,6 @@ import {
 } from '@chakra-ui/react';
 
 export {
-  Container,
   Box,
   Flex,
   Spacer,
