@@ -56,7 +56,8 @@ function Header() {
           <ButtonGroup>
             {navButtons.map((button) => (
               <Link to={button.to} onClick={setActiveButton} key={button.to}>
-                <Button colorScheme={button.colorScheme} variant={button.variant}>      {t(button.text)}
+                <Button colorScheme={button.colorScheme} variant={button.variant}>      
+                {t(button.text)}
                 </Button>
               </Link>
             ))}
