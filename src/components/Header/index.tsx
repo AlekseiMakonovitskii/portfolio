@@ -47,7 +47,6 @@ function Header() {
     setNavButtons(buttons);
   };
 
-
   return (
     <Container>
       <Box pt={3} pb={3}>
