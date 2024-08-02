@@ -8,7 +8,12 @@ import {
   Text,
   Drawer,
   DrawerCloseButton,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerHeader,
+  DrawerBody,
 } from '@chakra-ui/react';
+import { HamburgerIcon } from '@chakra-ui/icons'
 
 export {
   Box,
@@ -20,4 +25,9 @@ export {
   Text,
   Drawer,
   DrawerCloseButton,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerHeader,
+  DrawerBody,
+  HamburgerIcon,
 };

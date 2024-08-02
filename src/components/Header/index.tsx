@@ -1,68 +1,44 @@
-import React, { useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import Container from '../../coreComponents/Container'
-import { Button, ButtonGroup, Flex, Heading, Box } from '../../coreComponents'
-import { Link } from 'react-router-dom'
-import { NavButton } from '../../types'
-import { useTranslation } from 'react-i18next'
-
-const DEFAULT_BUTTONS = [
-  {
-    to: '/',
-    text: 'home',
-    colorScheme: 'blue',
-    variant: 'solid',
-  },
-  {
-    to: '/experience',
-    text: 'experience',
-    colorScheme: 'gray',
-    variant: 'ghost',
-  },
-  {
-    to: '/projects',
-    text: 'projects',
-    colorScheme: 'gray',
-    variant: 'ghost',
-  }
-]
+import { Button, Flex, Heading, Box, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, DrawerCloseButton, HamburgerIcon } from '../../coreComponents'
+import breakpoints from '../../styles/breakpoints'
+import { useMediaQuery } from '@chakra-ui/react'
+import { t } from 'i18next'
+import Nav from '../Nav'
 
 function Header() {
-  const [navButtons, setNavButtons] = useState<NavButton[]>(DEFAULT_BUTTONS);
-  const { t } = useTranslation();
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isMobile] = useMediaQuery(`(max-width: ${breakpoints.md_sm})`)
 
-  const setActiveButton = (e: React.MouseEvent<HTMLElement>) => {
-    const href = e.currentTarget.getAttribute('href');
-    const buttons = navButtons.map((button) => {
-      button.colorScheme = 'gray';
-      button.variant = 'ghost';
 
-      if (button.to === href) {
-        button.colorScheme = 'blue';
-        button.variant = 'solid';
-      }
+  const toggleNavOpen = useCallback(() => setIsNavOpen((prev) => !prev), []);
 
-      return button;
-    })
-
-    setNavButtons(buttons);
-  };
+  useEffect(() => {
+    setIsNavOpen(false);
+  }, [isMobile])
 
   return (
     <Container>
       <Box pt={3} pb={3}>
         <Flex justify='space-between' align='center'>
           <Heading size='lg'>{t`Aleksei Makonovitskii`}</Heading>
-          <ButtonGroup>
-            {navButtons.map((button) => (
-              <Link to={button.to} onClick={setActiveButton} key={button.to}>
-                <Button colorScheme={button.colorScheme} variant={button.variant}>      
-                {t(button.text)}
-                </Button>
-              </Link>
-            ))}
-          </ButtonGroup>
+         {isMobile ? <Button onClick={toggleNavOpen} variant='ghost'><HamburgerIcon boxSize={7}/></Button> : <Nav />}
         </Flex>
       </Box>
+
+     {isMobile && (
+      <Drawer isOpen={isNavOpen} onClose={toggleNavOpen} size='full'>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerHeader>
+            <DrawerCloseButton/>
+          </DrawerHeader>
+          <DrawerBody>
+            <Nav closeMobileNav={toggleNavOpen}/>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
+    )}
     </Container>
   )
 }
