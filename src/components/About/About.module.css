@@ -1,0 +1,7 @@
+.about {
+  cursor: pointer;
+}
+
+.about span {
+  transition-duration: 0.5s;
+}

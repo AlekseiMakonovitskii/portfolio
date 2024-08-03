@@ -19,7 +19,7 @@ function Header() {
 
   return (
     <Container>
-      <Box pt={3} pb={3}>
+      <Box pt={50} pb={50}>
         <Flex justify='space-between' align='center'>
           <Heading size='lg'>{t`Aleksei Makonovitskii`}</Heading>
          {isMobile ? <Button onClick={toggleNavOpen} variant='ghost'><HamburgerIcon boxSize={7}/></Button> : <Nav />}

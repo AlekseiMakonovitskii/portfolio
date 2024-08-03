@@ -8,7 +8,7 @@ interface ContainerProps {
 function Container(props: ContainerProps) {
   const { children } = props;
   return (
-    <ContainerUI maxW={1200}>{children}</ContainerUI>
+    <ContainerUI maxW={1200} minH={'100%'}>{children}</ContainerUI>
   )
 }
 

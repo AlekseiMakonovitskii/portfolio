@@ -1,11 +1,14 @@
 import React from 'react';
 import Main from '../coreComponents/Main';
 import Container from '../coreComponents/Container';
+import About from '../components/About';
 
 function HomePage() {
   return (
     <Main>
-      <Container>Home Page</Container>
+      <Container>
+        <About/>
+      </Container>
     </Main>
   );
 }
