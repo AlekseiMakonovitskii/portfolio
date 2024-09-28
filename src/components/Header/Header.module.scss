@@ -1,0 +1,98 @@
+@import '../../styles/index.scss';
+
+.header {
+  padding: 1rem 0;
+  border-bottom: $light-border;
+
+  &_menu_btn {
+    display: none!important;
+  }
+
+  &_content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  .logo {
+    font-weight: 800;
+    font-size: 2rem;
+    font-family: $font-family-concert;
+    cursor: pointer;
+
+    &:hover {
+      opacity: $opacity-value;
+    }
+  }
+
+  .nav {
+    &_header {
+      display: none;
+    }
+
+    &_content {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    a:hover {
+      opacity: $opacity-value;
+    }
+  };
+}
+
+@media (max-width: $screen-table) {
+  .header {
+    &_menu_btn {
+      display: flex!important;
+      background: transparent!important;
+    }
+  }
+  .nav {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: $light-color;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition-duration: $animation-time;
+    z-index: $modal-z-index;
+
+    &_open {
+      transform: translateX(0);
+    }
+
+    &_header {
+      display: flex!important;
+      min-height: 50px;
+      width: 100%;
+      justify-content: flex-end;
+      
+      button {
+        font-size: 1.5rem;
+      }
+
+      &_close_btn {
+        text-decoration: none!important;
+        margin: 1.5rem;
+      }
+    }
+
+    &_content {
+      flex-direction: column;
+      justify-content: center;
+      height: calc(100% - 150px);
+      a, button {
+        font-size: 1.5rem;
+      }
+
+      button {
+        padding: 1.5rem 1rem;
+      }
+    }
+  }
+}

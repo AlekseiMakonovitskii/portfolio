@@ -1,0 +1,10 @@
+@import '../styles/index.scss';
+
+.btn {
+  background: $dark-color!important;
+  color: $light-color!important;
+  &:hover {
+    background: $dark-color!important;
+    opacity: $opacity-value!important;
+  }
+}
