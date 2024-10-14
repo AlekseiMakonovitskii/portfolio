@@ -35,7 +35,7 @@ function Header() {
               <Link to='/' className={navLinkStyles.home}>Home</Link>
               <Link to='/projects' className={navLinkStyles.projects}>Projects</Link>
               <Link to='/experience' className={navLinkStyles.experience}>Experience</Link>
-              <ButtonDark>Download CV</ButtonDark>
+              <ButtonDark className={style.sv_button}>Download CV</ButtonDark>
             </div>
           </nav>
           <Button className={style.header_menu_btn} onClick={() => setIsOpen(true)}><FaBars size={30}/></Button>

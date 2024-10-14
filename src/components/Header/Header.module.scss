@@ -46,6 +46,10 @@
   };
 }
 
+.sv_button {
+  padding: 1.5rem 1rem;
+}
+
 @media (max-width: $screen-table) {
   .header {
     &_menu_btn {
