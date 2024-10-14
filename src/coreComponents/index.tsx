@@ -7,8 +7,8 @@ interface ComponentUIProps {
 }
 
 function ContainerUI(props: ComponentUIProps) {
-  const { children } = props;
-  return <Container maxW={1200}>{children}</Container>
+  const { children, className } = props;
+  return <Container maxW={1200} className={className}>{children}</Container>
 }
 
 function ButtonUI(props: ComponentUIProps) {
