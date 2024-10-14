@@ -39,6 +39,10 @@
     a:hover {
       opacity: $opacity-value;
     }
+
+    &_active_link {
+      font-weight: bold;
+    }
   };
 }
 
