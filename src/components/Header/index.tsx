@@ -38,7 +38,6 @@ function Header() {
               <ButtonDark>Download CV</ButtonDark>
             </div>
           </nav>
-
           <Button className={style.header_menu_btn} onClick={() => setIsOpen(true)}><FaBars size={30}/></Button>
         </div>
       </Container>
